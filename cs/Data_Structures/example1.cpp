@@ -10,7 +10,7 @@ int main() {
   // Pointer
   int i = 25;
   int *np = &i;
-
+  cout << "asdf" << *np << endl;
   // Reference
   int a = 5;
   int &j = a;
