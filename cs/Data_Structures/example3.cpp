@@ -3,6 +3,7 @@
 int func1(int a, int b);
 int func2(int &c, int &d);
 int func3(const int &e, const int &f);
+int &func4(const int &g, const int &h);
 int main() {
   int x = 5, y = 7;
   int p = 5, q = 7;
@@ -13,6 +14,7 @@ int main() {
   std::cout << p << " " << q << std::endl;
   std::cout << func3(i, j) << std::endl;
   std::cout << i << " " << j << std::endl;
+
   return 0;
 }
 
@@ -29,4 +31,8 @@ int func2(int &c, int &d) {
 int func3(const int &e, const int &f) {
   // e++, f++;
   return e + f;
+}
+int &func4(const int &g, const int &h) {
+  int k = g + h;
+  return g + h;
 }
