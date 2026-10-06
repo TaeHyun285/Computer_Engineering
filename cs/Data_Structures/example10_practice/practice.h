@@ -1,29 +1,19 @@
 #include <iostream>
 #include <ostream>
-#include <queue>
 using namespace std;
-class Prctice {
+class asdf {
 private:
   int xlow, ylow;
 
 public:
-  Prctice(const int x, const int y) : xlow(x), ylow(y) {};
-  ~Prctice() {
-    // later
-  }
+  asdf(const int x = 0, const int y = 0) : xlow(x), ylow(y) {};
+  ~asdf() {};
   int getx() { return xlow; }
   int gety() { return ylow; }
-  friend ostream &operator<<(ostream &os, const Prctice &som);
-  bool operator==(const Prctice &wak) {
-    if (this == &wak) {
-      return true;
-    } else if (this->xlow == wak.xlow && ylow == wak.ylow) {
-      return true;
-    } else
-      return false;
-  }
+  friend ostream &operator<<(ostream &os, asdf &sumt);
 };
-ostream &operator<<(ostream &os, const Prctice &som) {
-  os << som.xlow << "," << som.ylow << endl;
+
+ostream &operator<<(ostream &os, asdf &sumt) {
+  os << sumt.xlow << "," << sumt.ylow << endl;
   return os;
 }

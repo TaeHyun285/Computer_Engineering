@@ -1,13 +1,9 @@
 #include "practice.h"
 int main() {
-  Prctice r(1, 2);
-  Prctice k(3, 4);
-  Prctice *s = new Prctice(1, 3);
+  asdf r(1, 2);
+  asdf *s = new asdf(3, 5);
   cout << r.getx() << endl;
+  cout << r;
   cout << *s;
-  cout << (r == k) << endl;
-  cout << (r == *s) << endl;
-  cout << (r == r) << endl;
   return 0;
-  ;
 }
